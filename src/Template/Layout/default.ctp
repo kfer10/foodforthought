@@ -71,28 +71,29 @@
 
             </div>
             <div class="container">
+
+                <div class="btn-group-front">
+                    <a href="#" class="btn btn-md btn-primary">Coming Soon</a>
+                </div>
+
+                <!--
                 <div class="row row-md-reverse text-md-left">
                         <div class="row row-xs-middle well-lg--inset-2">
                             <div class="col-xs-12">
-                                <!--
+
                                 <div class="row row-xs-middle row-xs-center inset-1 row-md-left">
                                     <h1 class="visible-xs-inline-block text-medium">Food For Thought</h1>
                                 </div>
 
-                                -->
 
                                 <h2>For each person that purchases one of our delicious lunchboxes we get to feed 1 school kid in need!</h2>
 
-
-                                <div class="row text-left">
-
-                                </div>
-                                <div class="btn-group">
-                                    <center><a href="#" class="btn btn-md btn-primary">Coming Soon</a></center>
-                                </div>
                             </div>
                         </div>
+
                 </div>
+                -->
+
             </div>
         </section>
         <!-- END HEADER IMAGE -->
