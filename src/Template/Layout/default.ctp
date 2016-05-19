@@ -174,7 +174,7 @@
                     <div class="col-md-4">
                         <blockquote class="quote quote-1">
                             <div class="quote__content text-left">
-                                <div class="heading-6 text-medium">Kishen</div>
+                                <div class="heading-6 text-medium"><div class="font-honeyscript">Kishen</div></div>
                                 <i class="fa-envelope-o"></i> &nbsp hello@foodforthought.net.au<br>
                                 <i class="fa-phone"></i>&nbsp&nbsp&nbsp 0401 705 255
                             </div>
@@ -184,7 +184,7 @@
                     <div class="col-md-4">
                         <blockquote class="quote quote-1">
                             <div class="quote__content text-left">
-                                <div class="heading-6 text-medium">Sonia</div>
+                                <div class="heading-6 text-medium"><div class="font-honeyscript">Sonia</div></div>
                                 <i class="fa-envelope-o"></i>&nbsp hello@foodforthought.net.au<br>
                                 <i class="fa-phone"></i>&nbsp&nbsp 0481 726 755
                             </div>
@@ -202,7 +202,7 @@
         <!-- FOOTER -->
         <footer class="page-footer">
 
-            <a href="index-2.html" class="rd-navbar-brand brand text-xs-left">
+            <a href="#" class="rd-navbar-brand brand text-xs-left">
                 <img src="img/logo.png" alt="" width="130px">
             </a>
             <br><br>
@@ -212,10 +212,7 @@
                     <a href="" class="icon icon-lg fa-facebook-official"></a>
                 </div>
                 <div>
-                    <a href="" class="icon icon-lg fa-twitter-square"></a>
-                </div>
-                <div>
-                    <a href="" class="icon icon-lg fa-google-plus-square "></a>
+                    <a href="" class="icon icon-lg fa-instagram"></a>
                 </div>
             </div>
         </footer>

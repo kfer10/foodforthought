@@ -202,6 +202,12 @@ html.boxed .page {
   margin-right: -15px;
 }
 
+.font-honeyscript {
+  font-family: Honeyscript;
+  font-size: 35pt;
+  margin:-35px 0px -34px;
+}
+
 [class*='col-'] {
   padding-left: 15px;
   padding-right: 15px;
@@ -7683,6 +7689,14 @@ p.big {
   color: #4368a8;
 }
 
+.fa-instagram {
+  color: #ffffff;
+}
+
+.fa-instagram:hover {
+  color: #804407;
+}
+
 .fa-twitter-square {
   color: #ffffff;
 }
@@ -12198,7 +12212,7 @@ html:not(.lt-ie10) .box-md--mod-2 > .box__left {
   -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px;
   background-color: white;
   padding: 20px 28px 28px;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.42857;
   color: #898989;
   position: relative;
