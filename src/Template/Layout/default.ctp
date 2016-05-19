@@ -172,20 +172,24 @@
                 <a name="contact"><h3 class="text-medium" id="39329677_3">Contact Us</h3></a>
                 <div class="row">
                     <div class="col-md-4">
+                        <blockquote class="quote quote-1">
                             <div class="quote__content text-left">
                                 <div class="heading-6 text-medium">Kishen</div>
                                 <i class="fa-envelope-o"></i> &nbsp hello@foodforthought.net.au<br>
                                 <i class="fa-phone"></i>&nbsp&nbsp&nbsp 0401 705 255
                             </div>
                             <img src="img/profile1.jpg" class="round" width="100" height="100" alt="">
+                        </blockquote>
                     </div>
                     <div class="col-md-4">
+                        <blockquote class="quote quote-1">
                             <div class="quote__content text-left">
                                 <div class="heading-6 text-medium">Sonia</div>
                                 <i class="fa-envelope-o"></i>&nbsp hello@foodforthought.net.au<br>
                                 <i class="fa-phone"></i>&nbsp&nbsp 0481 726 755
                             </div>
                             <img src="img/profile2.jpg" class="round" width="100" height="100" alt="">
+                        </blockquote>
                     </div>
                 </div>
             </div>

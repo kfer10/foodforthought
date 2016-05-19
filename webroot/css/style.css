@@ -36,7 +36,7 @@
 * @revision     1.0
 */
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, p, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -12189,19 +12189,15 @@ html:not(.lt-ie10) .box-md--mod-2 > .box__left {
   color: #0DBBB4;
 }
 
-blockquote.quote-with-quotes q:before {
-  content: "\201c";
-}
-blockquote.quote-with-quotes q:after {
-  content: "\201d";
-}
 
 .quote-1 {
   position: relative;
 }
 .quote-1 .quote__content {
+  text-align: center;
+  -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px;
   background-color: white;
-  padding: 35px 28px 28px;
+  padding: 20px 28px 28px;
   font-size: 14px;
   line-height: 1.42857;
   color: #898989;
