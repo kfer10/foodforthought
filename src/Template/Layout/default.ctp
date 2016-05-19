@@ -52,9 +52,11 @@
                             </button>
 
 
+                            <!--
                             <a href="index-2.html" class="rd-navbar-brand brand text-xs-left">
                                 <img src="img/logo.png" alt="" width="130px">
                             </a>
+                            -->
 
                             <div class="rd-navbar-nav-wrap">
                                 <ul class="rd-navbar-nav">
@@ -76,8 +78,12 @@
                                 <div class="row row-xs-middle row-xs-center inset-1 row-md-left">
                                     <h1 class="visible-xs-inline-block text-medium">Food For Thought</h1>
                                 </div>
+
                                 -->
+
                                 <h2>For each person that purchases one of our delicious lunchboxes we get to feed 1 school kid in need!</h2>
+
+
                                 <div class="row text-left">
 
                                 </div>
