@@ -113,7 +113,7 @@
                         meals or opting for quick unhealthy takeaways.<br><br>
                         We hope to create a social movement that changes the way we make our food choices. Just by choosing to
                         order your lunch from Food for Thought, you can make a BIG difference to a child’s future every day. Our
-                        mission is to make sure no Aussie kid goes to school without a nutritious lunch, supporting education
+                        mission is to make sure no Aussie child goes to school without a nutritious lunch, supporting education
                         and breaking the cycle of poverty.
                     </p>
                 </div>
@@ -131,9 +131,9 @@
                         <h3 class="text-medium">How It Works</h3>
                     </div>
                     <div class="col-md-10 col-md-preffix-1 offset-4">
-                        <p> Food For Thought is a new social enterprise. It is a buy one donate one food start-up where we
+                        <p> Food for Thought is a new social enterprise. It is a buy one donate one food start-up where we
                             deliver healthy lunchboxes to<br> office workers at lunch time, for each person that purchases one
-                            of our delicious lunchboxes we get to feed 1 school kid in need!</p>
+                            of our delicious lunchboxes we get to feed 10 Aussie kids in need!</p>
                     </div>
                 </div>
                 <div class="btn-group">
