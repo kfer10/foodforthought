@@ -201,12 +201,6 @@
 
         <!-- FOOTER -->
         <footer class="page-footer">
-
-            <a href="#" class="rd-navbar-brand brand text-xs-left">
-                <img src="img/logo.png" alt="" width="130px">
-            </a>
-            <br><br>
-            <p>Copyright © <span id="copyright-year">2016</span>. All Rights Reserved.</p>
             <div class="inline-list--mod-1">
                 <div>
                     <a href="" class="icon icon-lg fa-facebook-official"></a>
@@ -215,6 +209,22 @@
                     <a href="" class="icon icon-lg fa-instagram"></a>
                 </div>
             </div>
+            <!--
+            <a href="#" class="rd-navbar-brand brand text-xs-left">
+                <img src="img/logo.png" alt="" width="80px">
+            </a>
+            -->
+            <br><br>
+            <div class="inline-list--mod-1">
+                Our Partners<br><br>
+                <div>
+                    <a href="http://www.charcoallane.com.au/"><img src="img/logo_charcoal_lane.jpg" width="120px" alt=""></a>
+                </div>
+                <div>
+                    <a href="http://www.eatup.org.au/"><img src="img/logo_eat_up.png" width="120px"  alt=""></a>
+                </div>
+            </div>
+            <p><font size="2pt">Copyright © 2016. All Rights Reserved.</font></p>
         </footer>
         <!-- END FOOTER -->
 
