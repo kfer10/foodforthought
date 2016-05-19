@@ -159,7 +159,7 @@
                     They both saw the incredible power of education and healthy food in their own lives and wanted to
                     give back to the Aussie kids that aren’t so fortunate. We want Aussie kids to be healthy, happy and educated.<br><br>
                 </p>
-                <img src="img/aboutus.jpg" alt=""/><br><br>
+                <!-- <img src="img/aboutus.jpg" alt=""/><br><br> -->
             </div>
         </section>
         <!-- END ABOUT US -->
