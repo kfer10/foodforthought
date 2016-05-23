@@ -12702,7 +12702,7 @@ html:not(.lt-ie10) .box-md--mod-2 > .box__left {
   font-weight: 400;
   border-style: solid;
   border-width: 2px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Yu Gothic UI";
   overflow: hidden;
   text-overflow: ellipsis;
   text-transform: uppercase;
@@ -13050,7 +13050,7 @@ html.rd-navbar-fixed-linked body {
   line-height: 1.78571;
   font-weight: 400;
   text-transform: none;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Yu Gothic UI";
 }
 .rd-navbar-static .rd-navbar-nav a,
 .rd-navbar-fullwidth .rd-navbar-nav a {

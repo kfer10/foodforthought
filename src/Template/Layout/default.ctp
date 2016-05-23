@@ -131,9 +131,9 @@
                         <h3 class="text-medium">How It Works</h3>
                     </div>
                     <div class="col-md-10 col-md-preffix-1 offset-4">
-                        <p> Food for Thought is a new social enterprise. It is a buy one donate one food start-up where we
+                        <p> Food for Thought is a new social enterprise. It is a buy one donate many food start-up where we
                             deliver healthy lunchboxes to<br> office workers at lunch time, for each person that purchases one
-                            of our delicious lunchboxes we get to feed 10 Aussie kids in need!</p>
+                            of our delicious lunchboxes we get to feed up to 10 Aussie kids in need!</p>
                     </div>
                 </div>
                 <div class="btn-group">
@@ -157,7 +157,7 @@
                     Kishen worked as a lawyer and management consultant for several years and understands how easy it is
                     to end up opting for unhealthy takeaways when working in a corporate environment.<br><br>
                     They both saw the incredible power of education and healthy food in their own lives and wanted to
-                    give back to the Aussie kids that aren’t so fortunate. We want Aussie kids to be healthy, happy and educated.<br><br>
+                    give back to the kids that aren’t so fortunate. We want Aussie kids to be healthy, happy and educated.<br><br>
                 </p>
                 <!-- <img src="img/aboutus.jpg" alt=""/><br><br> -->
             </div>
@@ -201,6 +201,7 @@
 
         <!-- FOOTER -->
         <footer class="page-footer">
+            <!--
             <div class="inline-list--mod-1">
                 <div>
                     <a href="" class="icon icon-lg fa-facebook-official"></a>
@@ -209,19 +210,19 @@
                     <a href="" class="icon icon-lg fa-instagram"></a>
                 </div>
             </div>
-            <!--
-            <a href="#" class="rd-navbar-brand brand text-xs-left">
-                <img src="img/logo.png" alt="" width="80px">
-            </a>
             -->
-            <br><br>
+            <a href="#" class="rd-navbar-brand brand text-xs-left">
+                <img src="img/logo.png" alt="" width="110px">
+            </a>
+
+            <br><br><br><br>
             <div class="inline-list--mod-1">
-                Our Partners<br><br>
+                <div class="font-honeyscript">Our Partners</div><br>
                 <div>
-                    <a href="http://www.charcoallane.com.au/"><img src="img/logo_charcoal_lane.jpg" width="120px" alt=""></a>
+                    <a href="http://www.charcoallane.com.au/"><img src="img/logo_charcoal_lane.jpg" width="170px" alt=""></a>
                 </div>
                 <div>
-                    <a href="http://www.eatup.org.au/"><img src="img/logo_eat_up.png" width="120px"  alt=""></a>
+                    <a href="http://www.eatup.org.au/"><img src="img/logo_eat_up.png" width="170px"  alt=""></a>
                 </div>
             </div>
             <p><font size="2pt">Copyright © 2016. All Rights Reserved.</font></p>
