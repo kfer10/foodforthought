@@ -51,7 +51,7 @@
                         <!--<span class="fa-user"></span> Register | Login-->
                         <!-- RD Navbar Nav-->
                         <ul class="rd-navbar-nav">
-                            <li class="active"><a href="index.html">Home</a></li>
+                            <li class="active"><a href="<?php echo $this->Url->build(["controller"=>"pages", "action" => "index"]); ?>">Home</a></li>
                             <li><a href="#howitworks">How It Works</a></li>
                             <li><a href="#aboutus">About Us</a></li>
                             <li><a href="<?php echo $this->Url->build(["controller"=>"contacts", "action" => "index"]); ?>">Contact Us</a></li>

@@ -79,7 +79,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-8 col-md-offset-2">
                         <!-- RD Mailform-->
-                        <form data-result-class="rd-mailform-validate" data-form-type="contact" method="post" action="http://static.livedemo00.template-help.com/wt_58900/bat/rd-mailform.php" class="rd-mailform row">
+                        <form data-result-class="rd-mailform-validate" data-form-type="contact" method="post" action="rd-mailform.php" class="rd-mailform row">
                             <div class="col-xs-12 col-sm-6">
                                 <input type="text" name="name" data-constraints="@NotEmpty" placeholder="* Your name...">
                             </div>
