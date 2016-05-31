@@ -171,11 +171,11 @@ return [
         'default' => [
             'className' => 'Mail',
             // The following keys are used in SMTP transports
-            'host' => 'localhost',
-            'port' => 25,
+            'host' => 'c3s3-2e-mel.hosting-services.net.au',
+            'port' => 465,
             'timeout' => 30,
-            'username' => 'user',
-            'password' => 'secret',
+            'username' => 'webmaster@foodforthought.net.au',
+            'password' => 'Fft2016',
             'client' => null,
             'tls' => null,
         ],

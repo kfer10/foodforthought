@@ -84,20 +84,23 @@
                     if (isset($_REQUEST['email']))  {
 
                         //Email information
-                        $admin_email = "kf777@hotmail.com.au";
+                        $to = "kf777@hotmail.com.au";
                         $name = $_REQUEST['name'];
+                        $phone = $_REQUEST['phone'];
+                        $company = $_REQUEST['company'];
                         $email = $_REQUEST['email'];
+                        $headers  = 'MIME-Version: 1.0' . "\r\n";
+                        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
                         $message = $_REQUEST['comment'];
-                        $subject = "FoodForThought Enquiry";
+                        $subject = "FoodForThought Enquiry from " . $name;
 
                         //send email
-                        mail($admin_email, $subject, $message, "From: " . $name . "<" . $email . ">");
+                        mail($to, $subject, $message . "<br><br><br> From: " . $name . "<br>Email: " . $email . "<br>Company: " . $company . "<br>Phone: " . $phone, $headers);
 
                         //Email response
                         echo "Your email has been sent. Thank you for contacting us!";
                     }
 
-                    //if "email" variable is not filled out, display the form
                     else  {
                         ?>
                         <form method="post" class="rd-mailform row">
