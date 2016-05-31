@@ -6,9 +6,12 @@
 var userAgent = navigator.userAgent.toLowerCase(),
     initialDate = new Date(),
     $html = $('html'),
+    isIE = (userAgent.indexOf('msie') != -1) ? parseInt(userAgent.split('msie')[1], 10) : false,
     isDesktop = $html.hasClass('desktop'),
     isTouch = "ontouchstart" in window,
     plugins = {
+        googleMapAPI: '//maps.google.com/maps/api/js',
+        pointerEvents: isIE && isIE < 11 ? 'js/pointer-events.min.js' : false,
         smoothScroll: $html.hasClass('use--smoothscroll') ? 'js/smoothscroll.min.js' : false,
         tooltip: $('[data-toggle="tooltip"]'),
         timePicker: $(".rd-mailform-time-picker"),
@@ -42,6 +45,7 @@ var userAgent = navigator.userAgent.toLowerCase(),
         swiper: $(".swiper-slider"),
         isotope: $(".isotope"),
         mailForm: $('.rd-mailform'),
+        googleMap: $('#google-map'),
         slick: $('.carousel-slider')
 
     },
@@ -193,7 +197,35 @@ $document.ready(function () {
         $year.text(initialDate.getUTCFullYear());
     }
 
+    /**
+     * @module       IE Polyfills
+     * @description  Adds some loosing functionality to IE browsers
+     */
+    //function isIE() {
+    //if (!isIE) {
+    //    return (userAgent.indexOf('trident') != -1) ? 11 : ( (userAgent.indexOf('edge') != -1) ? 12 : false);
+    //}
+    //return isIE;
+    //}
+    if (isIE) {
+        if (isIE === 12) {
+            $('html').addClass('ie-edge');
+        }
 
+        if (isIE === 11) {
+            $('html').addClass('ie-11');
+        }
+        if (plugins.pointerEvents) {
+            $.getScript(plugins.pointerEvents)
+                .done(function () {
+                    $html.addClass('lt-ie-11');
+                    PointerEventsPolyfill.initialize({});
+                });
+        }
+        if (isIE < 10) {
+            $html.addClass('lt-ie-10');
+        }
+    }
 
     /**
      * @module       Bootstrap Tooltips
@@ -216,60 +248,7 @@ $document.ready(function () {
      * @license      MIT License
      * @link         http://cms.devoffice.com/coding-demo/mnemon1k/rd-validation/demo/
      */
-    if (plugins.mailForm.length) {
-        if ("RDValidator" in jQuery.fn) {
 
-            [].slice.call(plugins.mailForm).forEach(function (item) {
-                var $currentForm = $(item),
-                    mailFormSettings = {
-                        formType: $currentForm.data("form-type"),
-                        resultPanelClass: $currentForm.data("result-class"),
-                        msg: {
-                            'MF000': 'Successfully sent!',
-                            'MF001': 'Recipients are not set!',
-                            'MF002': 'Form will not work locally!',
-                            'MF003': 'Please, define email field in your form!',
-                            'MF004': 'Please, define type of your form!',
-                            'MF254': 'Something went wrong with PHPMailer!',
-                            'MF255': 'Aw, snap! Something went wrong.'
-                        }
-                    },
-                    resultPanel = $('.' + mailFormSettings.resultPanelClass),
-                    mailFormOptions = {
-                        data: {"form-type": mailFormSettings.formType},
-                        error: function (result) {
-                            resultPanel.text(mailFormSettings.msg[result]);
-                        },
-                        success: function (result) {
-                            result = result.length == 5 ? result : 'MF255';
-                            resultPanel.text(mailFormSettings.msg[result]);
-                            if (result === "MF000") {
-                                resultPanel[0].classList.add("success");
-                                setTimeout(function () {
-                                    resultPanel[0].classList.remove("success");
-                                    $currentForm.clearForm();
-                                }, 2500);
-                            } else {
-                                resultPanel[0].classList.add("error");
-                                setTimeout(function () {
-                                    resultPanel[0].classList.remove("error");
-                                }, 4000);
-                            }
-                        }
-                    };
-
-                $currentForm.RDValidator({
-                    constraints: {
-                        "@Time": {
-                            rule: /^(1[012]|[1-9]):[0-5]\d\s[ap]\.?m\.?$/i,
-                            message: 'Enter valid time format!'
-                        }
-                    }
-                });
-                $currentForm.ajaxForm(mailFormOptions);
-            });
-        }
-    }
 
     /**
      * @module       Text rotator
@@ -661,7 +640,7 @@ $document.ready(function () {
                     bar.trail.className.baseVal = "progress-bar__trail";
                 }
 
-                if (progressItem.getAttribute("data-easing")) {
+                if (progressItem.getAttribute("data-easing") && !isIE) {
                     $(document)
                         .on("scroll", {"barItem": bar}, $.proxy(function (event) {
                             var bar = event.data.barItem;
@@ -732,10 +711,10 @@ $document.ready(function () {
             var view = $(plugins.viewAnimate[i]).not('.active');
             $document.on("scroll", $.proxy(function () {
 
-                if (isScrolledIntoView(this)) {
-                    this.addClass("active");
-                }
-            }, view))
+                    if (isScrolledIntoView(this)) {
+                        this.addClass("active");
+                    }
+                }, view))
                 .trigger("scroll");
         }
     }
@@ -805,7 +784,7 @@ $document.ready(function () {
                                 var $this = $(this),
                                     speed;
 
-                                if (parallax && !isMobile) {
+                                if (parallax && !isIEBrows && !isMobile) {
                                     if (speed = $this.attr("data-speed")) {
                                         makeParallax($this, speed, s, false);
                                     }
@@ -1120,6 +1099,42 @@ $document.ready(function () {
     }
 
     /**
+     * @module     RD Google Map
+     * @description Enables RD Google Map Plugin
+     */
+    if (plugins.googleMap.length) {
+        $.getScript(plugins.googleMapAPI)
+            .done(function () {
+                var head = document.getElementsByTagName('head')[0],
+                    insertBefore = head.insertBefore;
+
+                head.insertBefore = function (newElement, referenceElement) {
+                    if (newElement.href && newElement.href.indexOf('//fonts.googleapis.com/css?family=Roboto') != -1 || newElement.innerHTML.indexOf('gm-style') != -1) {
+                        return;
+                    }
+                    insertBefore.call(head, newElement, referenceElement);
+                };
+
+                lazyInit(plugins.googleMap, function () {
+                    plugins.googleMap.googleMap({
+                        styles: [{
+                            "featureType": "road",
+                            "elementType": "geometry",
+                            "stylers": [{"lightness": 100}, {"visibility": "simplified"}]
+                        }, {
+                            "featureType": "water",
+                            "elementType": "geometry",
+                            "stylers": [{"visibility": "on"}, {"color": "#C6E2FF"}]
+                        }, {
+                            "featureType": "poi",
+                            "elementType": "geometry.fill",
+                            "stylers": [{"color": "#C5E3BF"}]
+                        }, {"featureType": "road", "elementType": "geometry.fill", "stylers": [{"color": "#D1D1B8"}]}]
+                    });
+                });
+            });
+    }
+    /**
      * Allow type in input only digits, tab key and enter key
      */
     if ($numbersOnly.length) {
@@ -1144,9 +1159,9 @@ $(window).load(function () {
         for (i = 0; i < plugins.isotope.length; i++) {
             var isotopeItem = plugins.isotope[i]
                 , iso = new Isotope(isotopeItem, {
-                    itemSelector: '[class*="col-"], .isotope-item',
-                    layoutMode: isotopeItem.getAttribute('data-isotope-layout') ? isotopeItem.getAttribute('data-isotope-layout') : 'masonry'
-                });
+                itemSelector: '[class*="col-"], .isotope-item',
+                layoutMode: isotopeItem.getAttribute('data-isotope-layout') ? isotopeItem.getAttribute('data-isotope-layout') : 'masonry'
+            });
 
             doSetTimeout(isotopeItem);
         }

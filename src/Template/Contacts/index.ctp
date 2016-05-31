@@ -79,25 +79,53 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-8 col-md-offset-2">
                         <!-- RD Mailform-->
-                        <form data-result-class="rd-mailform-validate" data-form-type="contact" method="post" action="rd-mailform.php" class="rd-mailform row">
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" name="name" data-constraints="@NotEmpty" placeholder="* Your name...">
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" name="name" data-constraints="@NotEmpty" placeholder="* Your company...">
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" name="email" data-constraints="@NotEmpty @Email" placeholder="* Your e-mail...">
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" data-constraints="@Phone" name="phone" placeholder="Your phone..." class="form-input">
-                            </div>
-                            <div class="col-xs-12 col-sm-12">
-                                <textarea name="message" data-constraints="@NotEmpty" placeholder="* Message:"></textarea>
-                            </div>
-                            <!-- RD SelectMenu-->
-                            <button class="btn btn-primary btn-sm btn-min-width">send message</button>
+                        <?php
+                    //if "email" variable is filled out, send email
+                    if (isset($_REQUEST['email']))  {
+
+                        //Email information
+                        $admin_email = "kf777@hotmail.com.au";
+                        $name = $_REQUEST['name'];
+                        $email = $_REQUEST['email'];
+                        $message = $_REQUEST['comment'];
+                        $subject = "FoodForThought Enquiry";
+
+                        //send email
+                        mail($admin_email, $subject, $message, "From: " . $name . "<" . $email . ">");
+
+                        //Email response
+                        echo "Your email has been sent. Thank you for contacting us!";
+                    }
+
+                    //if "email" variable is not filled out, display the form
+                    else  {
+                        ?>
+                        <form method="post" class="rd-mailform row">
+
+                        <div class="col-xs-12 col-sm-6">
+                            <?= $this->Form->input('name', ['required' => true, 'placeholder'=>'Name *', 'label' => false]); ?>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <?= $this->Form->input('company', ['required' => true, 'placeholder'=>'Company *', 'label' => false]); ?>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <?= $this->Form->input('email', ['required' => true, 'placeholder'=>'Email *', 'label' => false]); ?>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <?= $this->Form->input('phone', ['required' => false, 'placeholder'=>'Phone', 'label' => false]); ?>
+                        </div>
+                        <div class="col-xs-12 col-sm-12">
+                            <?php echo $this->Form->textarea('comment', ['required' => true, 'rows' => '15','cols' => '40', 'label' => false, 'class' => 'form-control', 'placeholder'=>'Message *']);?>
+                        </div>
+                        <button class="btn btn-primary btn-sm btn-min-width">send message</button>
+
                         </form>
+
+
+                        <?php
+                    }
+                    ?>
+
                     </div>
                 </div>
             </div>
