@@ -83,8 +83,8 @@ html {
 }
 
 @font-face {
-  font-family: 'Honeyscript';
-  src: url('../fonts/HoneyScript-Light.ttf');
+  font-family: "freight-sans-pro";
+  src: url('../fonts/freight-sans-medium.otf');
 }
 
 body {
@@ -13069,7 +13069,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-family: "HoneyScript";
+  font-family: "freight-sans-pro";
   font-weight: 100;
   font-size: 65pt;
   line-height: 1.5;
@@ -13081,7 +13081,8 @@ h2 mark, .h2 mark {
 
 @media (min-width: 768px) {
   h2, .h2 {
-    font-size: 65pt;
+    font-weight: 600;
+    font-size: 40pt;
     line-height: 1.13043;
   }
 }
@@ -23833,7 +23834,7 @@ a.fa-shopping-cart,
  * @licesne      MIT License
  */
 .swiper-container {
-  background-image: url(../img/index3.jpg);
+  background-image: url(../img/index4.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -26811,9 +26812,9 @@ label span {
  * Quote
  */
 
-.font-honeyscript {
-  font-family: Honeyscript;
-  font-size: 35pt;
+  .font-honeyscript {
+  font-family: "freight-sans-pro";
+  font-size: 20pt;
 }
 
 .round {

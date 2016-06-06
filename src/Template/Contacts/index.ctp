@@ -84,7 +84,7 @@
                     if (isset($_REQUEST['email']))  {
 
                         //Email information
-                        $to = "kf777@hotmail.com.au";
+                        $to = "hello@foodforthought.net.au";
                         $name = $_REQUEST['name'];
                         $phone = $_REQUEST['phone'];
                         $company = $_REQUEST['company'];

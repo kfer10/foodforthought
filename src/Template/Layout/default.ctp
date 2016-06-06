@@ -101,9 +101,9 @@
             <div class="container section section-inset-1 z-index">
                 <a name="howitworks"><h2 class="text-center">How It Works</h2></a>
                 <hr>
-                    <p> Food for Thought is a new social enterprise. It is a buy one donate many food start-up where we
+                    <p> Food for Thought is a new social enterprise. It is a buy one donate one food start-up where we
                         deliver healthy lunchboxes to<br> office workers at lunch time, for each person that purchases one
-                        of our delicious lunchboxes we get to feed up to 10 Aussie kids in need!<br><br>
+                        of our delicious lunchboxes we get to feed an Aussie kid in need!<br><br>
                         Our lunches are nutritionist developed and lovingly made by Charcoal Lane in Fitzroy.
                         Your handcrafted lunchbox includes a sandwhich and a salad which comes in vegan and non-vegan options.
 
