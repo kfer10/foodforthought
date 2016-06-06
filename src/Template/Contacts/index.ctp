@@ -141,7 +141,7 @@
                             <div class="media">
                                 <div class="media-left"><span class="icon icon-primary icon-sm fa-phone"></span></div>
                                 <div class="media-body">
-                                    <p class="h6">Phones</p>
+                                    <p class="h6">Phone</p>
                                     <dl class="dl-horizontal">
                                         Sonia: 0481 726 755<br>
                                         Kishen: 0401 705 255
@@ -168,7 +168,24 @@
 
 
     <!-- Page Footer-->
-    <footer class="page-foot section-inset-4 bg-dark">
+    <section class="section bg-dark">
+        <div class="container">
+            <h2 class="text-center">Get News and Updates</h2>
+            <hr>
+            <div class="row">
+                <div class="inline-list--mod-1">
+                    <form class="rd-mailform row">
+                        <div class="cols-xs-12 col-sm-email">
+                            <div class="inline"><?= $this->Form->input('email', ['required' => false, 'placeholder'=>'Email Address', 'label' => false, 'class'=>'sign-up']); ?></div>
+                            <div class="inline"><button class="btn btn-primary-white btn-sm">Sign up</button></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="page-foot section-inset-4 bg-white">
         <a href="<?php echo $this->Url->build(["controller"=>"pages", "action" => "index"]); ?>" class="rd-navbar-brand brand text-xs-left">
             <img src="img/logo.png" alt="" width="110px">
         </a>

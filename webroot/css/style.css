@@ -1999,6 +1999,25 @@ fieldset[disabled] .btn-default.focus {
   border-color: #000000;
 }
 
+.btn-primary-white {
+  color: #000000;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.inline {
+  padding-left:10px;
+  display: inline;
+  float: left;
+}
+
+.btn-primary-white:hover {
+  color: #fff;
+  background-color: #a7a7a7;
+  border-color: #a7a7a7;
+}
+
+
 .btn-primary:focus,
 .btn-primary.focus {
   color: #fff;
@@ -2674,9 +2693,14 @@ input[type="button"].btn-block {
   margin-left: 100%;
 }
 
+
 @media (min-width: 768px) {
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left;
+  }
+  .col-sm-email{
+    margin: auto;
+    width: 33.3333%;
   }
   .col-sm-1 {
     width: 8.33333%;
@@ -13071,7 +13095,7 @@ h1, .h1 {
 h2, .h2 {
   font-family: "freight-sans-pro";
   font-weight: 100;
-  font-size: 65pt;
+  font-size: 40pt;
   line-height: 1.5;
 }
 
@@ -13978,7 +14002,7 @@ a:hover, a:focus {
 
 /*  page-foot  */
 .page-foot {
-  padding-top: 60px;
+  padding-top: 10px;
   padding-bottom: 60px;
   color: #b6afa8;
 }
@@ -14368,8 +14392,14 @@ hr {
 }
 
 .bg-dark {
+  padding: 15px 0px 15px;
   background-color: #000000;
   color: #fff;
+}
+
+.bg-white {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .bg-dark .fa-facebook,
@@ -14456,7 +14486,15 @@ hr {
 }
 
 .bg-about {
-  background-image: url(../img/contact.jpg);
+  background-image: url(../img/contact3.jpg);
+  background-size: 100px;
+  background-repeat: repeat-x;
+  background-position: center center;
+  background-color: #000000;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+
 }
 
 .bg-services {
@@ -26033,6 +26071,10 @@ and (max-width: 1024px) {
   line-height: 34px;
   color: #000;
   background: #fff;
+}
+
+.sign-up input {
+  width: 300px;
 }
 
 .rd-mailform input:-moz-placeholder, .rd-mailform textarea:-moz-placeholder, .rd-mailform .rd-mailform-select:-moz-placeholder {
