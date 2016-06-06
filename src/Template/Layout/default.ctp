@@ -65,7 +65,7 @@
                 <div class="jumbotron-mod-1 text-center">
                     <div>
                         <br><br><br><br><br><br>
-                        <div class='btn-group-variant'> <a class='btn btn-primary btn-sm' href='<?php echo $this->Url->build(["controller"=>"contacts", "action" => "index"]); ?>'>Order Now</a></div>
+                        <!--<div class='btn-group-variant'> <a class='btn btn-primary btn-sm' href='<?php echo $this->Url->build(["controller"=>"contacts", "action" => "index"]); ?>'>Order Now</a></div> -->
                     </div>
                 </div>
                 <div class="swiper-wrapper">
@@ -179,10 +179,10 @@
             <hr>
             <div class="row">
                 <div class="inline-list--mod-1">
-                    <form class="rd-mailform row">
+                    <form class="row">
                         <div class="cols-xs-12 col-sm-email">
-                            <div class="inline"><?= $this->Form->input('email', ['required' => false, 'placeholder'=>'Email Address', 'label' => false, 'class'=>'sign-up']); ?></div>
-                            <div class="inline"><button class="btn btn-primary-white btn-sm">Sign up</button></div>
+                            <div class="inline"><input class="input-email-address" name="email" placeholder="Email Address" type="text"></div>
+                            <div class="inline"><button class="btn-sign-up">SIGN UP</button></div>
                         </div>
                     </form>
                 </div>

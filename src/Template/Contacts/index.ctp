@@ -168,16 +168,16 @@
 
 
     <!-- Page Footer-->
-    <section class="section bg-dark">
+    <section class="bg-dark">
         <div class="container">
             <h2 class="text-center">Get News and Updates</h2>
             <hr>
             <div class="row">
                 <div class="inline-list--mod-1">
-                    <form class="rd-mailform row">
+                    <form class="row">
                         <div class="cols-xs-12 col-sm-email">
-                            <div class="inline"><?= $this->Form->input('email', ['required' => false, 'placeholder'=>'Email Address', 'label' => false, 'class'=>'sign-up']); ?></div>
-                            <div class="inline"><button class="btn btn-primary-white btn-sm">Sign up</button></div>
+                            <div class="inline"><input class="input-email-address" name="email" placeholder="Email Address" type="text"></div>
+                            <div class="inline"><button class="btn-sign-up">SIGN UP</button></div>
                         </div>
                     </form>
                 </div>
