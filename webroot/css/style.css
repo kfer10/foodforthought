@@ -2036,6 +2036,12 @@ fieldset[disabled] .btn-default.focus {
   font-weight: normal;
 }
 
+.btn-sign-up:hover {
+  color: #000;
+  background: #fff;
+
+}
+
 .inline {
   padding-left:10px;
   display: inline;
@@ -14424,7 +14430,7 @@ hr {
 
 .bg-dark {
   padding: 15px 0px 15px;
-  background-color: #000000;
+  background-color: #303030;
   color: #fff;
 }
 
@@ -14512,7 +14518,7 @@ hr {
   background-image: url(../img/banner1.jpg);
 }
 
-.bg-subscribe * {
+.bg-subscribe {
   color: #fff;
 }
 
@@ -16030,7 +16036,7 @@ blockquote {
 
 .btn-sm, .btn-group-sm > .btn {
   font-size: 18px;
-  border-radius: 6px;
+  border-radius: 300px;
 }
 
 .btn-md {

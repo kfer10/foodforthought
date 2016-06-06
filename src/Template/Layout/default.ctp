@@ -99,7 +99,8 @@
         <!-- START HOW IT WORKS -->
         <section class="bg-light bg-subscribe">
             <div class="container section section-inset-1 z-index">
-                <a name="howitworks"><h2 class="text-center">How It Works</h2></a>
+                <a name="howitworks"></a>
+                <h2 class="text-center">How It Works</h2>
                 <hr>
                     <p> Food for Thought is a new social enterprise. It is a buy one donate one food start-up where we
                         deliver healthy lunchboxes to<br> office workers at lunch time, for each person that purchases one
@@ -108,7 +109,7 @@
                         Your handcrafted lunchbox includes a sandwhich and a salad which comes in vegan and non-vegan options.
 
                     </p>
-                <div class='btn-group-variant'> <a class='btn btn-primary btn-sm' href='<?php echo $this->Url->build(["controller"=>"contacts", "action" => "index"]); ?>'>Order Now</a></div>
+                <div class='btn-group-variant'> <a class='btn btn-primary-white btn-sm' href='<?php echo $this->Url->build(["controller"=>"contacts", "action" => "index"]); ?>'>Order Now</a></div>
             </div>
         </section>
         <!-- END HOW IT WORKS -->
@@ -118,7 +119,7 @@
         <!-- START ABOUT US -->
         <section class="section bg-white">
             <div class="container">
-                <a name="aboutus"><h2>About Us</h2></a>
+                <a name="aboutus"></a><h2>About Us</h2>
                 <hr>
                 <p>Melbourne born founders and siblings Kishen and Sonia started Food for Thought
                     with the desire to bridge the poverty gap and make it easier for you to make a direct difference to
